@@ -9,10 +9,12 @@ function upDate(previewPic){
     to the alt text of the preview image 
 */
     console.log('enter upDate')
-    console.log(previewPic.alt)
-    document.getElementById('image').innerHTML = previewPic.alt;
-    console.log(previewPic.src)
-    document.getElementById('image').style.backgroundImage = "url('" + previewPic.src + "')";
+    var pic_alt = previewPic.alt;
+    var pic_src = previewPic.src;
+    console.log(pic_alt)
+    document.getElementById('image').innerHTML = pic_alt;
+    console.log(pic_src)
+    document.getElementById('image').style.backgroundImage = "url('" + pic_src  + "')";
     console.log('end upDate')
 }
 
@@ -25,7 +27,8 @@ function unDo(){
     back to the original text.  You can use the html code to see what that original text was
 */
     console.log('enter unDo')
-    document.getElementById('image').innerHTML = 'Hover over an image below to display here.';
+    var original_text = 'Hover over an image below to display here.';
+    document.getElementById('image').innerHTML = original_text;
     document.getElementById('image').style.backgroundImage = '';
     console.log('end upDo')
 }
